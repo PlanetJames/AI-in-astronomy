@@ -7,32 +7,31 @@ For many explanations & examples of the things below, you can often just Google 
 
 ## Contents
 
-1. AI in General
+1. [AI in General](#ai-in-general)
 2. Neural Networks - Explanations and Overviews of Architectures
 	1. General introductions
 	2. How a network learns
 	3. Other aspects of deep learning
-3. Tools & Packages
-4. Types of Deep Learning
+3. [Tools & Packages](#tools-&-packages)
+4. [Types of Deep Learning](#types-of-deep-learning)
 	1. CNN-based data processing & analysis
 	2. Generative AI
 	3. Misc.
-5. AI use in Astronomy
+5. [AI use in Astronomy](#ai-use-in-astronomy)
 	1. Summaries of ML in astronomy
 	2. Example usage
 
 
 ## AI in General
 
-### Glossary of artificial intelligence
+### General abbreviations
 https://en.wikipedia.org/wiki/Glossary_of_artificial_intelligence
 
-### General abbreviations
   AI = artifical intelligence\
-	ML = machine learning\
-	DL = deep learning\
-	CS = citizen science\
-	(A)NN = (artificial) neural network
+  ML = machine learning\
+  DL = deep learning\
+  CS = citizen science\
+  (A)NN = (artificial) neural network
 
 ### Example categories of AI usage
 - Classification
@@ -77,126 +76,127 @@ These methods can also utilise crowdsourcing / citizen science as the "human" pa
   - https://towardsdatascience.com/active-learning-in-machine-learning-525e61be16e5
 
 
-Neural Networks - Explanations and Overviews of Architectures
-=============================================================
+## Neural Networks - Explanations and Overviews of Architectures
 
-General introductions
----------------------
+### General introductions
 
-v7labs: The Essential Guide to Neural Network Architectures - https://www.v7labs.com/blog/neural-network-architectures-guide
-Machine Learning Glossary - https://ml-cheatsheet.readthedocs.io/en/latest/index.html
-Your First Machine Learning Project in Python Step-By-Step - https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
-Deep Learning Tutorial - https://www.geeksforgeeks.org/deep-learning-tutorial/
+#### Main
+- v7labs: The Essential Guide to Neural Network Architectures - https://www.v7labs.com/blog/neural-network-architectures-guide
+- Machine Learning Glossary - https://ml-cheatsheet.readthedocs.io/en/latest/index.html
+- Your First Machine Learning Project in Python Step-By-Step - https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+- Deep Learning Tutorial - https://www.geeksforgeeks.org/deep-learning-tutorial/
 
-Deep Learning Neural Networks Explained in Plain English - https://www.freecodecamp.org/news/deep-learning-neural-networks-explained-in-plain-english/
-Understand Machine Learning Algorithms - https://machinelearningmastery.com/start-here/#:~:text=Your%20Python%20Projects-,Understand,-Machine%20Learning%20Algorithms
-Machine Learning Tutorial: A Step-by-Step Guide for Beginners - https://www.simplilearn.com/tutorials/machine-learning-tutorial
-Simple AI articles (2017 intro to ML) - https://medium.com/simple-ai
-IBM Neural Networks - https://www.ibm.com/topics/neural-networks
-IBM AI Articles - https://www.ibm.com/think/artificial-intelligence#:~:text=Listen%20now-,Articles
-	What is AI? - https://www.ibm.com/topics/artificial-intelligence
-	What is machine learning? - https://www.ibm.com/topics/machine-learning
-	AI vs. ML vs. DL vs. NN - https://www.ibm.com/blog/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks/
-	What is a chatbot? - https://www.ibm.com/topics/chatbots
+#### Other
+- Deep Learning Neural Networks Explained in Plain English - https://www.freecodecamp.org/news/deep-learning-neural-networks-explained-in-plain-english/
+- Understand Machine Learning Algorithms - https://machinelearningmastery.com/start-here/#:~:text=Your%20Python%20Projects-,Understand,-Machine%20Learning%20Algorithms
+- Machine Learning Tutorial: A Step-by-Step Guide for Beginners - https://www.simplilearn.com/tutorials/machine-learning-tutorial
+- Simple AI articles (2017 intro to ML) - https://medium.com/simple-ai
+- IBM Neural Networks - https://www.ibm.com/topics/neural-networks
+- IBM AI Articles - https://www.ibm.com/think/artificial-intelligence#:~:text=Listen%20now-,Articles
+  - What is AI? - https://www.ibm.com/topics/artificial-intelligence
+  - What is machine learning? - https://www.ibm.com/topics/machine-learning
+  - AI vs. ML vs. DL vs. NN - https://www.ibm.com/blog/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks/
+  - What is a chatbot? - https://www.ibm.com/topics/chatbots
 
-How a network learns
---------------------
+### How a network learns
 
 Neural networks consist of interconnected layers of artificial neurons, each made up of weights and biases (stored as matrix elements; typically randomised at first unless using pre-trained values (known as transfer learning)) that are combined with each neuron's input (such as one or more pixels of an image) via a pre-defined non-linear "activation" function to produce that neuron's output. In this way, an input to the network (such as an image) will be fed through the network to produce an output (such as a binary "yes/no" classification), and we want the network to give the correct output each time. For supervised learning, we seek to train the network to minimise the difference between these outputs and the ground truths across all inputs (aka fitting the data). During training, a "gradient descent" optimiser algorithm combined with a defined learning rate allow the network to optimise a cost (or "loss") function, which is a predefined function that compares the output of the network to the ground truth for each input (e.g. mean square error). A process known as backpropagation then allows this error in the output to be propagated backwards through the network so the weights and biases can be suitably adjusted. Through repeating this process for each input or batch of inputs, the network "learns" what to output. There are various types of network architectures, layers, activation functions, optimisers, and loss functions, depending on the task you want it to do.
-	Overview of a Neural Network’s Learning Process - https://medium.com/data-science-365/overview-of-a-neural-networks-learning-process-61690a502fa
-	Weights & Biases - https://towardsdatascience.com/whats-the-role-of-weights-and-bias-in-a-neural-network-4cf7e9888a0f
-					 - https://www.geeksforgeeks.org/the-role-of-weights-and-bias-in-neural-networks/
-	Activation function - https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6
-	Gradient descent & learning rate - https://www.ibm.com/topics/gradient-descent
-	Specific optimizers - https://medium.com/mlearning-ai/optimizers-in-deep-learning-7bf81fed78a0
-	Cost/loss functions - https://machinelearningmastery.com/loss-and-loss-functions-for-training-deep-learning-neural-networks/
-	Common loss functions - https://towardsdatascience.com/common-loss-functions-in-machine-learning-46af0ffc4d23
-	Backpropagation - https://towardsdatascience.com/understanding-backpropagation-algorithm-7bb3aa2f95fd
+- Overview of a Neural Network’s Learning Process - https://medium.com/data-science-365/overview-of-a-neural-networks-learning-process-61690a502fa
+- Weights & Biases
+  - https://towardsdatascience.com/whats-the-role-of-weights-and-bias-in-a-neural-network-4cf7e9888a0f
+  - https://www.geeksforgeeks.org/the-role-of-weights-and-bias-in-neural-networks/
+- Activation function - https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6
+- Gradient descent & learning rate - https://www.ibm.com/topics/gradient-descent
+- Specific optimizers - https://medium.com/mlearning-ai/optimizers-in-deep-learning-7bf81fed78a0
+- Cost/loss functions - https://machinelearningmastery.com/loss-and-loss-functions-for-training-deep-learning-neural-networks/
+- Common loss functions - https://towardsdatascience.com/common-loss-functions-in-machine-learning-46af0ffc4d23
+- Backpropagation - https://towardsdatascience.com/understanding-backpropagation-algorithm-7bb3aa2f95fd
+
 Hyperparameters like learning rate, layer width & depth, and input batch size often require optimising/fine-tuning as well. Hence we split our data set into three: training, validation, and test sets.
-	Data set types - https://towardsdatascience.com/training-vs-testing-vs-validation-sets-a44bed52a0e1
-	Data set types - https://www.v7labs.com/blog/train-validation-test-set
-	Training: batch size & epochs - https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/
-	Cross-validation - https://machinelearningmastery.com/k-fold-cross-validation/
-					 - https://towardsdatascience.com/cross-validation-a-beginners-guide-5b8ca04962cd
-	Fine-tuning - https://towardsdatascience.com/hyper-parameter-tuning-techniques-in-deep-learning-4dad592c63c8
-	Fine-tuning can be automated, training & validating the model repeatedly, typically using either a grid search or random search approach to exploring the hyperparameters, or using an more advanced Bayesian optimisation method.
-	https://medium.com/@linmarsirait2/hyperparameter-tuning-in-machine-learning-using-bayesian-optimization-8ee522ef6d99
-	https://towardsdatascience.com/a-conceptual-explanation-of-bayesian-model-based-hyperparameter-optimization-for-machine-learning-b8172278050f
+- Data set types - https://towardsdatascience.com/training-vs-testing-vs-validation-sets-a44bed52a0e1
+- Data set types - https://www.v7labs.com/blog/train-validation-test-set
+- Training: batch size & epochs - https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/
+- Cross-validation
+  - https://machinelearningmastery.com/k-fold-cross-validation/
+  - https://towardsdatascience.com/cross-validation-a-beginners-guide-5b8ca04962cd
+- Fine-tuning - https://towardsdatascience.com/hyper-parameter-tuning-techniques-in-deep-learning-4dad592c63c8
+- Fine-tuning can be automated, training & validating the model repeatedly, typically using either a grid search or random search approach to exploring the hyperparameters, or using an more advanced Bayesian optimisation method.
+  - https://medium.com/@linmarsirait2/hyperparameter-tuning-in-machine-learning-using-bayesian-optimization-8ee522ef6d99
+  - https://towardsdatascience.com/a-conceptual-explanation-of-bayesian-model-based-hyperparameter-optimization-for-machine-learning-b8172278050f
 	
-Other aspects of deep learning
-------------------------------
+### Other aspects of deep learning
 
-Evaluating the performance of classifiers:
-	Precision, recall, sensitivity and specificity - https://towardsdatascience.com/should-i-look-at-precision-recall-or-specificity-sensitivity-3946158aace1
-	Confusion matrix - https://www.v7labs.com/blog/confusion-matrix-guide
-	Area Under the Curve (AUC) ROC curve - https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5
+#### Evaluating the performance of classifiers:
+- Precision, recall, sensitivity and specificity - https://towardsdatascience.com/should-i-look-at-precision-recall-or-specificity-sensitivity-3946158aace1
+- Confusion matrix - https://www.v7labs.com/blog/confusion-matrix-guide
+- Area Under the Curve (AUC) ROC curve - https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5
 
-Evaluating training & validation performance:
-	Learning curve - https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/
-	Overfitting vs underfitting - https://www.geeksforgeeks.org/underfitting-and-overfitting-in-machine-learning/
+#### Evaluating training & validation performance:
+- Learning curve - https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/
+- Overfitting vs underfitting - https://www.geeksforgeeks.org/underfitting-and-overfitting-in-machine-learning/
 
-Modifications to (hopefully) improve performance:
-	Addressing overfitting with Regularization - https://www.geeksforgeeks.org/regularization-in-machine-learning/
-	Addressing overfitting with Dropout - https://towardsdatascience.com/dropout-in-neural-networks-47a162d621d9
-	Skip Connections (used in ResNets, DenseNets, U-Nets) - https://theaisummer.com/skip-connections/
-	How To Improve Deep Learning Performance - https://machinelearningmastery.com/improve-deep-learning-performance/
+#### Modifications to (hopefully) improve performance:
+- Addressing overfitting with Regularization - https://www.geeksforgeeks.org/regularization-in-machine-learning/
+- Addressing overfitting with Dropout - https://towardsdatascience.com/dropout-in-neural-networks-47a162d621d9
+- Skip Connections (used in ResNets, DenseNets, U-Nets) - https://theaisummer.com/skip-connections/
+- How To Improve Deep Learning Performance - https://machinelearningmastery.com/improve-deep-learning-performance/
 
-Transfer Learning:
-	https://cs231n.github.io/transfer-learning/
-	https://machinelearningmastery.com/transfer-learning-for-deep-learning/
+#### Transfer Learning:
+- https://cs231n.github.io/transfer-learning/
+- https://machinelearningmastery.com/transfer-learning-for-deep-learning/
 
-Bayesian Neural Networks (for predicting uncertainties):
-	https://keras.io/examples/keras_recipes/bayesian_neural_networks/
-	https://towardsdatascience.com/making-your-neural-network-say-i-dont-know-bayesian-nns-using-pyro-and-pytorch-b1c24e6ab8cd
-	Bayesian Convolutional Neural Networks with Bernoulli Approximate Variational Inference - https://arxiv.org/abs/1506.02158
-	Uncertainties in Parameters Estimated with Neural Networks: Application to Strong Gravitational Lensing - https://iopscience.iop.org/article/10.3847/2041-8213/aa9704/meta
+#### Bayesian Neural Networks (for predicting uncertainties):
+- https://keras.io/examples/keras_recipes/bayesian_neural_networks/
+- https://towardsdatascience.com/making-your-neural-network-say-i-dont-know-bayesian-nns-using-pyro-and-pytorch-b1c24e6ab8cd
+- Bayesian Convolutional Neural Networks with Bernoulli Approximate Variational Inference - https://arxiv.org/abs/1506.02158
+- Uncertainties in Parameters Estimated with Neural Networks: Application to Strong Gravitational Lensing - https://iopscience.iop.org/article/10.3847/2041-8213/aa9704/meta
 
-Understanding/Interpretability:
-	Occlusion Mapping
-		https://towardsdatascience.com/inshort-occlusion-analysis-for-explaining-dnns-d0ad3af9aeb6
-	Attention Mapping
-		https://towardsdatascience.com/learn-to-pay-attention-trainable-visual-attention-in-cnns-87e2869f89f1
-	Grad-CAM (for CNNs) - Gradient-weighted Class Activation Mapping
-		Original Grad-CAM paper - https://arxiv.org/abs/1610.02391
-		https://github.com/jacobgil/pytorch-grad-cam
-		https://towardsdatascience.com/understand-your-algorithm-with-grad-cam-d3b62fce353
-	(Stochastic) Bayesian neural networks for uncertainty prediction
-		A Tutorial for Deep Learning Users - https://arxiv.org/abs/2007.06823
-		https://towardsdatascience.com/why-you-should-use-bayesian-neural-network-aaf76732c150
-	Google DeepDream
-		DeepDream Explained Clearly - https://www.garysnotebook.com/20190826_1
+#### Understanding/Interpretability:
+- Occlusion Mapping
+  - https://towardsdatascience.com/inshort-occlusion-analysis-for-explaining-dnns-d0ad3af9aeb6
+- Attention Mapping
+  - https://towardsdatascience.com/learn-to-pay-attention-trainable-visual-attention-in-cnns-87e2869f89f1
+- Grad-CAM (for CNNs) - Gradient-weighted Class Activation Mapping
+  - Original Grad-CAM paper - https://arxiv.org/abs/1610.02391
+  - https://github.com/jacobgil/pytorch-grad-cam
+  - https://towardsdatascience.com/understand-your-algorithm-with-grad-cam-d3b62fce353
+- (Stochastic) Bayesian neural networks for uncertainty prediction
+  - A Tutorial for Deep Learning Users - https://arxiv.org/abs/2007.06823
+  - https://towardsdatascience.com/why-you-should-use-bayesian-neural-network-aaf76732c150
+- Google DeepDream
+  - DeepDream Explained Clearly - https://www.garysnotebook.com/20190826_1
 
 
-Tools & Packages
-================
+## Tools & Packages
 
-Python Packages (each have guides on their own websites as well):
-	Machine learning and data pre-processing:
-		Scikit-learn - https://scikit-learn.org/stable/
-	Deep learning:
-		Tensorflow - https://www.tensorflow.org/
-			Introduction to Tensorflow: https://machinelearningmastery.com/introduction-python-deep-learning-library-tensorflow/
-		Keras (uses Tensorflow) - https://keras.io/
-			Introduction to Keras: https://machinelearningmastery.com/introduction-python-deep-learning-library-keras/
-			Tensorflow & Keras: https://machinelearningmastery.com/tensorflow-tutorial-deep-learning-with-tf-keras/
-		PyTorch - https://pytorch.org/
-			Introduction to PyTorch: https://machinelearningmastery.com/pytorch-tutorial-develop-deep-learning-models/
-		There are various articles comparing these packages, e.g. https://www.simplilearn.com/keras-vs-tensorflow-vs-pytorch-article
-	Efficient library (for speed and automatic support for GPUs):
-		JAX - https://theaisummer.com/jax/
-	Bayesian Hyperparameter Optimisation:
-		GPyOpt - https://sheffieldml.github.io/GPyOpt/
-		HyperOpt - https://towardsdatascience.com/an-introductory-example-of-bayesian-optimization-in-python-with-hyperopt-aae40fff4ff0
-		(There's probably many more recent methods as well)
+#### Python Packages (each have guides on their own websites as well):
+- Machine learning and data pre-processing:
+  - Scikit-learn - https://scikit-learn.org/stable/
+- Deep learning:
+  - Tensorflow - https://www.tensorflow.org/
+    - Introduction to Tensorflow: https://machinelearningmastery.com/introduction-python-deep-learning-library-tensorflow/
+  - Keras (uses Tensorflow) - https://keras.io/
+    - Introduction to Keras: https://machinelearningmastery.com/introduction-python-deep-learning-library-keras/
+    - Tensorflow & Keras: https://machinelearningmastery.com/tensorflow-tutorial-deep-learning-with-tf-keras/
+  - PyTorch - https://pytorch.org/
+    - Introduction to PyTorch: https://machinelearningmastery.com/pytorch-tutorial-develop-deep-learning-models/
+  - There are various articles comparing these packages, e.g. https://www.simplilearn.com/keras-vs-tensorflow-vs-pytorch-article
+- Efficient library (for speed and automatic support for GPUs):
+  - JAX - https://theaisummer.com/jax/
+- Bayesian Hyperparameter Optimisation:
+  - GPyOpt - https://sheffieldml.github.io/GPyOpt/
+  - HyperOpt - https://towardsdatascience.com/an-introductory-example-of-bayesian-optimization-in-python-with-hyperopt-aae40fff4ff0
+  - (There's probably many more recent methods as well)
 
-Designing and visualising neural network architectures:
-	https://datascience.stackexchange.com/questions/14899/how-to-draw-deep-learning-network-architecture-diagrams
-	https://github.com/ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network
+#### Designing and visualising neural network architectures:
+- https://datascience.stackexchange.com/questions/14899/how-to-draw-deep-learning-network-architecture-diagrams
+- https://github.com/ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network
 
-AstronomicAL (an interactive dashboard for visualisation, integration and classification of data using Active Learning) - https://github.com/grant-m-s/AstronomicAL
+#### Interactive visualisation dashboard:
+- AstronomicAL (an interactive dashboard for visualisation, integration and classification of data using Active Learning) - https://github.com/grant-m-s/AstronomicAL
 
-Citizen science (crowdsourced data mining)
-	Zooniverse - https://www.zooniverse.org/
+#### Citizen science:
+- Zooniverse (crowdsourced data mining) - https://www.zooniverse.org/
 
 
 Types of Deep Learning
