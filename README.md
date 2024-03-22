@@ -8,18 +8,18 @@ For many explanations & examples of the things below, you can often just Google 
 ## Contents
 
 1. [AI in General](#ai-in-general)
-2. Neural Networks - Explanations and Overviews of Architectures
-	1. General introductions
-	2. How a network learns
-	3. Other aspects of deep learning
-3. [Tools & Packages](#tools-&-packages)
+2. [Neural Networks - Explanations and Overviews of Architectures](#neural-networks---explanations-and-overviews-of-architectures)
+	1. [General introductions](#general-introductions)
+	2. [How a network learns](#how-a-network-learns)
+	3. [Other aspects of deep learning](#other-aspects-of-deep-learning)
+3. [Tools and Packages](#tools-and-packages)
 4. [Types of Deep Learning](#types-of-deep-learning)
-	1. CNN-based data processing & analysis
-	2. Generative AI
-	3. Misc.
+	1. [CNN-based data processing and analysis](#cnn-based-data-processing-and-analysis)
+	2. [Generative AI](#generative-ai)
+	3. [Miscellaneous](#miscellaneous)
 5. [AI use in Astronomy](#ai-use-in-astronomy)
-	1. Summaries of ML in astronomy
-	2. Example usage
+	1. [Summaries of ML in astronomy](#summaries-of-ml-in-astronomy)
+	2. [Example usage](#example-usage)
 
 
 ## AI in General
@@ -167,7 +167,7 @@ Hyperparameters like learning rate, layer width & depth, and input batch size of
   - DeepDream Explained Clearly - https://www.garysnotebook.com/20190826_1
 
 
-## Tools & Packages
+## Tools and Packages
 
 #### Python Packages (each have guides on their own websites as well):
 - Machine learning and data pre-processing:
@@ -199,11 +199,9 @@ Hyperparameters like learning rate, layer width & depth, and input batch size of
 - Zooniverse (crowdsourced data mining) - https://www.zooniverse.org/
 
 
-Types of Deep Learning
-======================
+## Types of Deep Learning
 
-CNN-based data processing & analysis
-------------------------------------
+### CNN-based data processing and analysis
 
 CNN - Convolutional Neural Network (typically supervised; used when working with images; building block for many other models)
 	CNNs are most often used for classification problems, though they can also be used for regression tasks.
@@ -255,8 +253,7 @@ U-Net (typically supervised; mainly for image segmentation, though has also been
 	https://www.geeksforgeeks.org/u-net-architecture-explained/
 	https://towardsdatascience.com/understanding-u-net-61276b10f360
 
-Generative AI
--------------
+### Generative AI
 
 All generative AI models are trained to inherently generate new data (e.g. text, images) from randomness, using different techniques to do so. Variational Autoencoders (VAEs) were the first type of generative AI, but often produced somewhat blurry images. Generative Adversarial Networks (GANs) have also been used for generating sharper images, particularly for specific types of images (e.g. faces), though they are difficult to train and hence not well suited for more general image generation. The first of the more general generative AI (e.g. DALL-E 1) used a combination of Transformers and VAEs to split text prompts into tokens, encode these as embeddings (representations of the tokens that machines can understand), and then decode these into new images. The latest text-to-image systems (e.g. DALL-E 2, Stable Diffusion, Imagen, MidJourney) now use a different approach - diffusion models.
 
@@ -332,43 +329,39 @@ A Few Articles on the Ethics of Generative AI
 	https://www.forbes.com/sites/forbestechcouncil/2023/10/17/which-ethical-implications-of-generative-ai-should-companies-focus-on/
 	https://link.springer.com/article/10.1007/s10676-024-09745-x (Klenk 2024. Ethics of generative AI and manipulation: a design-oriented research agenda)
 
-Misc.
------
+### Miscellaneous
 
-PINN - Physics Informed Neural Network (supervised; use a physically-derived loss function so that output parameters correspond to physical variables)
+**PINN - Physics Informed Neural Network** (supervised; use a physically-derived loss function so that output parameters correspond to physical variables)
 	https://towardsdatascience.com/physics-informed-neural-networks-pinns-an-intuitive-guide-fff138069563
 
-RIM - Restricted Boltzmann machine (unsupervised; 2-layer fully connected network)
+**RIM - Restricted Boltzmann Machine** (unsupervised; 2-layer fully connected network)
 	https://www.geeksforgeeks.org/restricted-boltzmann-machine/
 
-SOM - Self-Organizing Map (unsupervised; used for for clustering and dimensionality reduction; produces a low-dimensional (typically 2D) representation of a higher dimensional data set while preserving the topological structure of the data)
+**SOM - Self-Organizing Map** (unsupervised; used for for clustering and dimensionality reduction; produces a low-dimensional (typically 2D) representation of a higher dimensional data set while preserving the topological structure of the data)
 	https://towardsdatascience.com/self-organizing-maps-1b7d2a84e065
 	https://www.geeksforgeeks.org/self-organising-maps-kohonen-maps/
 
 
-AI use in Astronomy
-===================
+## AI use in Astronomy
 
 CNNs and their variants (e.g. ResNets, Mask R-CNN) are primarily used for detection and classification within astronomical images.
 Recurrent networks are generally used for detection and classification within transient data (e.g. supernovae).
 GANs often used for generating synthetic data, typically catalogues of images for training & testing other methods.
 VAEs & U-nets used for image modification (denoising, deblurring, etc.) or segmentation (e.g. deblending).
 
-Summaries of ML in astronomy
-----------------------------
+### Summaries of ML in astronomy
 
-- The Role of Machine Learning in the Next Decade of Cosmology (see p4) https://arxiv.org/abs/1902.10159
-- Foreword to the Focus Issue on Machine Learning in Astronomy and Astrophysics https://arxiv.org/abs/1906.08349
+- _The Role of Machine Learning in the Next Decade of Cosmology_ (see p4) https://arxiv.org/abs/1902.10159
+- _Foreword to the Focus Issue on Machine Learning in Astronomy and Astrophysics_ https://arxiv.org/abs/1906.08349
 	(See Tables 1 & 2, plus Section 3 for examples of Emerging, Progressing, and Established uses of ML in various sub-fields)
 
-Example usage
--------------
+### Example usage
+
 Below are some example areas in astronomy where AI has been applied. There are far too many research publications to list here, though the occassional paper is provided for some of the more specific use cases.
 
-- Machine Learning and Artificial Intelligence applied to astronomy 2 conference (Open University, 2021)
+- _Machine Learning and Artificial Intelligence applied to astronomy 2_ conference (Open University, 2021)
 	https://ras.ac.uk/events-and-meetings/ras-meetings/machine-learning-and-artificial-intelligence-applied-astronomy-2
 	(See PDF attachments for attendees' individual uses of AI)
-
 - [CNN] Spectroscopic/photometric redshift estimation
 - [CNN] Finding high-z sources
 - [CNN] (Lensed) Gravitational wave detection
@@ -377,9 +370,7 @@ Below are some example areas in astronomy where AI has been applied. There are f
 - [CNN] Estimating cosmological parameters from simulated 3D dark matter distributions
 - [CNN] Weak gravitational lensing shear map estimation and dark matter mapping
 - [CNN] Galaxy properties: surface brightness fitting, morphology, bars, halo
-	E.g. Mike Walmsley's Zoobot model applied to Galaxy Zoo's DECaLS data and later DESI imaging, trained on citizen science classifications
-		https://academic.oup.com/mnras/article/509/3/3966/6378289
-		https://academic.oup.com/mnras/article/526/3/4768/7283169
+  - E.g. Mike Walmsley's Zoobot model applied to Galaxy Zoo's DECaLS data and later DESI imaging, trained on citizen science classifications (https://academic.oup.com/mnras/article/509/3/3966/6378289 and https://academic.oup.com/mnras/article/526/3/4768/7283169)
 - [R-CNN transfer learning] Galaxy feature detection: finding giant star-forming clumps (https://arxiv.org/abs/2312.03503)
 - [CNN, GAN, VAE] Deblending galaxies
 - [GAN] High-resolution synthetic galaxy generation
@@ -387,16 +378,11 @@ Below are some example areas in astronomy where AI has been applied. There are f
 - [cGAN] Anomaly detection for JWST Imaging (e.g. https://iopscience.iop.org/article/10.3847/2515-5172/acff65)
 - [Autoencoder] Super-resolving telescope imaging (e.g. https://doi.org/10.1093/mnras/stab2195)
 - [RNN] Supernovae & quasar classification
-- [Custom] Image Restoration (denoising & deblurring) (network like an autoencoder but with residual layers instead of a latent space)
-	https://arxiv.org/abs/2311.00186
-- [Physics-aware autoencoder] Self-supervised galaxy model fitting https://arxiv.org/abs/1907.03957
+- [Custom] Image Restoration (denoising & deblurring) - network like an autoencoder but with residual layers instead of a latent space (https://arxiv.org/abs/2311.00186)
+- [Physics-aware autoencoder] Self-supervised galaxy model fitting (https://arxiv.org/abs/1907.03957)
 - [Transformer] Improving ADS searches with natural language processing (https://arxiv.org/abs/2112.00590)
 - [CNN and variants] Detection and modelling of strong gravitational lenses, for example:
-	- A Bayesian approach to strong lens finding using an ensemble classifier (citizen science, ResNet, CNN)
-		https://ui.adsabs.harvard.edu/abs/2023arXiv231107455H/abstract
-	- Finding and rank-ordering strong gravitational lenses with DenseNets (densely connected CNN)
-		https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.4188N/abstract
-		 DenseNets achieve comparable true positive rates but considerably lower false positive rates (when compared to residual networks; ResNets), so are recommended.
-	- Detecting strong lenses: exploring interpretability and sensitivity to rare lensing configurations (https://doi.org/10.1093/mnras/stac562)
-	- Strong lens modelling: comparing and combining Bayesian neural networks and parametric profile fitting
-		https://academic.oup.com/mnras/article/505/3/4362/6287584
+  - A Bayesian approach to strong lens finding using an ensemble classifier (citizen science, ResNet, CNN) (https://ui.adsabs.harvard.edu/abs/2023arXiv231107455H/abstract)
+  - Finding and rank-ordering strong gravitational lenses with DenseNets (densely connected CNN) (https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.4188N/abstract) - DenseNets achieve comparable true positive rates but considerably lower false positive rates (when compared to residual networks; ResNets), so are recommended.
+  - Detecting strong lenses: exploring interpretability and sensitivity to rare lensing configurations (https://doi.org/10.1093/mnras/stac562)
+  - Strong lens modelling: comparing and combining Bayesian neural networks and parametric profile fitting (https://academic.oup.com/mnras/article/505/3/4362/6287584)
