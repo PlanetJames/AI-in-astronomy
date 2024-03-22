@@ -203,55 +203,55 @@ Hyperparameters like learning rate, layer width & depth, and input batch size of
 
 ### CNN-based data processing and analysis
 
-CNN - Convolutional Neural Network (typically supervised; used when working with images; building block for many other models)
-	CNNs are most often used for classification problems, though they can also be used for regression tasks.
-	https://towardsdatascience.com/an-introduction-to-convolutional-neural-networks-eb0b60b58fd7
-	CNNs for regression (example given in Matlab rather than Python, but may still be useful for understanding):
-		https://uk.mathworks.com/help/deeplearning/ug/train-a-convolutional-neural-network-for-regression.html
-	CNN Layer Types:
-		- Convolutional layers (feature extraction from input images; contains convolutional filters/kernels)
-		- Pooling layers (performs down sampling: decrease the size of input images so later layers see more abstract features)
-			https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/
-		- Fully connected ("dense") layers (draw relationships between extracted features to classify the input)
-	Notes on appropriate convolutional kernel size:
-		https://towardsdatascience.com/deciding-optimal-filter-size-for-cnns-d6f7b56f9363
-		https://medium.com/analytics-vidhya/how-to-choose-the-size-of-the-convolution-filter-or-kernel-size-for-cnn-86a55a1e2d15
-	Example advanced CNN architectures:
-		https://www.geeksforgeeks.org/convolutional-neural-network-cnn-architectures/
-		GoogleNet / Inception (inputs pass through modules, each containing multiple different sized filters)
-			https://towardsdatascience.com/a-simple-guide-to-the-versions-of-the-inception-network-7fc52b863202
-		ResNet (uses "skip connections" to allow more robust training of deeper networks)
-			Deep Residual Learning for Image Recognition - https://arxiv.org/abs/1512.03385
-			https://towardsdatascience.com/hitchhikers-guide-to-residual-networks-resnet-in-keras-385ec01ec8ff
-			https://github.com/priya-dwivedi/Deep-Learning/blob/master/resnet_keras/Residual_Networks_yourself.ipynb
-			Understanding residual blocks
-				https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec
-				https://paperswithcode.com/method/residual-block
-		DenseNet (all layers interconnected, like a ResNet, but slightly different connection for better results)
-			https://towardsdatascience.com/review-densenet-image-classification-b6631a8ef803
-			(Compared to ResNet, higher accuracy & requires fewer parameters, but more memory-intensive and more hyperparameters to tune)
-		EfficientNet(V2) (very high-performing CNN using "compound scaling")
-			Compound scaling is the systematic scaling of the model's dimensions (width, depth, and resolution) according to the input shape to produce the optimal network architecture. EfficientNetV2 improves performance using MBConv blocks (inverted residual blocks) among other things.
-			EfficientNetV1
-				https://paperswithcode.com/method/efficientnet
-				https://arjun-sarkar786.medium.com/understanding-efficientnet-the-most-powerful-cnn-architecture-eaeb40386fad
-			EfficientNetV2
-				https://paperswithcode.com/method/efficientnetv2
-				https://medium.com/aiguys/review-efficientnetv2-smaller-models-and-faster-training-47d4215dcdfb
+**CNN - Convolutional Neural Network** (typically supervised; used when working with images; building block for many other models) \
+  CNNs are most often used for classification problems, though they can also be used for regression tasks. \
+  https://towardsdatascience.com/an-introduction-to-convolutional-neural-networks-eb0b60b58fd7
+- CNN Layer Types:
+  - Convolutional layers (feature extraction from input images; contains convolutional filters/kernels)
+  - Pooling layers (performs down sampling: decrease the size of input images so later layers see more abstract features) \
+    https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/
+  - Fully connected ("dense") layers (draw relationships between extracted features to classify the input)
+- Notes on appropriate convolutional kernel size: \
+  https://towardsdatascience.com/deciding-optimal-filter-size-for-cnns-d6f7b56f9363 \
+  https://medium.com/analytics-vidhya/how-to-choose-the-size-of-the-convolution-filter-or-kernel-size-for-cnn-86a55a1e2d15
+- CNNs for regression (example given in Matlab rather than Python, but may still be useful for understanding): \
+  https://uk.mathworks.com/help/deeplearning/ug/train-a-convolutional-neural-network-for-regression.html
+- Example advanced CNN architectures: \
+  https://www.geeksforgeeks.org/convolutional-neural-network-cnn-architectures/
+  - **GoogleNet / Inception** (inputs pass through modules, each containing multiple different sized filters) \
+    https://towardsdatascience.com/a-simple-guide-to-the-versions-of-the-inception-network-7fc52b863202
+  - **ResNet - Residual Network** (uses "skip connections" to allow more robust training of deeper networks) \
+      _Deep Residual Learning for Image Recognition_ - https://arxiv.org/abs/1512.03385 \
+      https://towardsdatascience.com/hitchhikers-guide-to-residual-networks-resnet-in-keras-385ec01ec8ff \
+      https://github.com/priya-dwivedi/Deep-Learning/blob/master/resnet_keras/Residual_Networks_yourself.ipynb
+    - Understanding residual blocks \
+      https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec \
+      https://paperswithcode.com/method/residual-block
+  - **DenseNet** (all layers interconnected, like a ResNet, but slightly different connection for better results) \
+    Compared to ResNet, it has higher accuracy & requires fewer parameters, but is more memory-intensive and has more hyperparameters to tune. \
+    https://towardsdatascience.com/review-densenet-image-classification-b6631a8ef803
+  - **EfficientNet(V2)** (very high-performing CNN using "compound scaling") \
+    Compound scaling is the systematic scaling of the model's dimensions (width, depth, and resolution) according to the input shape to produce the optimal network architecture. EfficientNetV2 improves performance using MBConv blocks (inverted residual blocks) among other things.
+    - EfficientNetV1 \
+      https://paperswithcode.com/method/efficientnet \
+      https://arjun-sarkar786.medium.com/understanding-efficientnet-the-most-powerful-cnn-architecture-eaeb40386fad
+    - EfficientNetV2 \
+      https://paperswithcode.com/method/efficientnetv2 \
+      https://medium.com/aiguys/review-efficientnetv2-smaller-models-and-faster-training-47d4215dcdfb
 	
-3D CNN (typically supervised; uses three-dimensional filters & pooling to deal with 3D inputs, but is notably slower than conventional 2D CNNs)
-	https://medium.com/@saba99/3d-cnn-4ccfab119cc2
-	https://medium.com/@tvial_77168/convolutional-neural-networks-in-a-3d-world-30d66b304bfd
-	https://towardsdatascience.com/step-by-step-implementation-3d-convolutional-neural-network-in-keras-12efbdd7b130
+**3D CNN** (typically supervised; uses three-dimensional filters & pooling to deal with 3D inputs, but is notably slower than conventional 2D CNNs) \
+  https://medium.com/@saba99/3d-cnn-4ccfab119cc2 \
+  https://medium.com/@tvial_77168/convolutional-neural-networks-in-a-3d-world-30d66b304bfd \
+  https://towardsdatascience.com/step-by-step-implementation-3d-convolutional-neural-network-in-keras-12efbdd7b130
 
-R-CNN - Regional CNN (typically supervised; used for object detection - in addition to classification, it also applies a bounding box around each identified object, so can identify multiple objects of various classes)
-	https://www.geeksforgeeks.org/r-cnn-region-based-cnns/
-	https://medium.com/analytics-vidhya/region-based-convolutional-neural-network-rcnn-b68ada0db871
+**R-CNN - Regional CNN** (typically supervised; used for object detection - in addition to classification, it also applies a bounding box around each identified object, so can identify multiple objects of various classes) \
+  https://www.geeksforgeeks.org/r-cnn-region-based-cnns/ \
+  https://medium.com/analytics-vidhya/region-based-convolutional-neural-network-rcnn-b68ada0db871
 
-U-Net (typically supervised; mainly for image segmentation, though has also been used for denoising, super-resolution, and more)
-	U-nets contain an encoder and decoder, but unlike autoencoders the decoder also makes use of encoder information via skip connections. These skip connections aid in accurate feature extraction, but prevent the encoder and decoder from being separated.
-	https://www.geeksforgeeks.org/u-net-architecture-explained/
-	https://towardsdatascience.com/understanding-u-net-61276b10f360
+**U-Net** (typically supervised; mainly for image segmentation, though has also been used for denoising, super-resolution, and more) \
+  U-Nets contain an encoder and decoder, but unlike autoencoders the decoder also makes use of encoder information via skip connections. These skip connections aid in accurate feature extraction, but prevent the encoder and decoder from being separated. \
+  https://www.geeksforgeeks.org/u-net-architecture-explained/ \
+  https://towardsdatascience.com/understanding-u-net-61276b10f360
 
 ### Generative AI
 
@@ -259,75 +259,77 @@ All generative AI models are trained to inherently generate new data (e.g. text,
 
 For natural language processing (NLP) tasks, recurrent neural networks (RNNs) and Long Short-Term Memory (LSTM) networks were used but processed words one by one. Modern Large Language Models (LLMs) like ChatGPT use a transformer (GPT itself stands for Generative Pretrained Transformer), which can process all the words in a sentence simultaneously to speed up training, as well as to learn the relationships between words to provide context and meaning.
 
-https://tryolabs.com/blog/2022/08/31/from-dalle-to-stable-diffusion
+https://tryolabs.com/blog/2022/08/31/from-dalle-to-stable-diffusion \
 https://research.ibm.com/blog/what-is-generative-AI
 
-AE - Autoencoder (unsupervised/self-supervised; consists of an encoder and decoder, used to learn a latent space representation by regenerating the input image)
-	Autoencoders have a wide range of applications, including data compression, dimensionality reduction, anomaly detection, facial recognition, denoising, and generative tasks. The encoder and decoder can be separated after training, e.g. allowing the decoder to be used for image generation.
-	https://www.ibm.com/topics/autoencoder
-	https://medium.com/@soumallya160/the-basic-concept-of-autoencoder-the-self-supervised-deep-learning-454e75d93a04
-	https://towardsdatascience.com/auto-encoder-what-is-it-and-what-is-it-used-for-part-1-3e5c6f017726
-	- VAE (Variational Autoencoder) is a version that learns probability distributions for their latent space, making them a form of stochastic encoding (rather than deterministic) and hence a type of generative AI - for example, VAEs were used for OpenAI’s original Dall-E image generation model.
+**A Few Articles on the Ethics of Generative AI** \
+\- https://towardsdatascience.com/generative-ai-ethics-b2db92ecb909 \
+\- https://blogs.ed.ac.uk/ede/2023/07/13/generative-ai-ethics-all-the-way-down/ \
+\- https://www.forbes.com/sites/forbestechcouncil/2023/10/17/which-ethical-implications-of-generative-ai-should-companies-focus-on/ \
+\- https://link.springer.com/article/10.1007/s10676-024-09745-x (Klenk 2024. _Ethics of generative AI and manipulation: a design-oriented research agenda_)
 
-GAN - Generative Adversarial Network (typically unsupervised; consists of a "generator" and a "discriminator" with the aim of genenerating new images)
-	GANs have often been used for generative AI, mainly for specific use cases (e.g. face generation).
-	https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/
-	https://www.geeksforgeeks.org/generative-adversarial-network-gan/
-	https://medium.com/@marcodelpra/generative-adversarial-networks-dba10e1b4424
-	When it comes to generative AI, GANs are typically more difficult to train than autoencoders, but produce sharper images.
-	https://medium.com/@parakatta/vae-v-s-gan-a-case-study-b09c7169ac02
-	- cGAN (conditional GAN) is a variant that is trained with labels so it can later generate images with specific details.
-		https://machinelearningmastery.com/how-to-develop-a-conditional-generative-adversarial-network-from-scratch/
+**AE - Autoencoder** (unsupervised/self-supervised; consists of an encoder and decoder, used to learn a latent space representation by regenerating the input image) \
+  Autoencoders have a wide range of applications, including data compression, dimensionality reduction, anomaly detection, facial recognition, denoising, and generative tasks. The encoder and decoder can be separated after training, e.g. allowing the decoder to be used for image generation. \
+  https://www.ibm.com/topics/autoencoder \
+  https://medium.com/@soumallya160/the-basic-concept-of-autoencoder-the-self-supervised-deep-learning-454e75d93a04 \
+  https://towardsdatascience.com/auto-encoder-what-is-it-and-what-is-it-used-for-part-1-3e5c6f017726
+- Variants:
+  - **VAE - Variational Autoencoder** (a version that learns probability distributions for their latent space, making them a form of stochastic encoding (rather than deterministic) and hence a type of generative AI - for example, VAEs were used for OpenAI’s original Dall-E image generation model)
 
-RNN - Recurrent Neural Network (typically supervised; processes sequential or time series data, such as for Natural Language Processing)
-	Applied to e.g. NLP, speech recognition, language translation. Has a form of "memory" so that, for a given input, prior inputs can be incorporated to influence the output (e.g. earlier words in a sentence combine to draw meaning/context for the current word being processed). RNN training uses a backpropagation through time (BPTT) algorithm, which is akin to backpropagation but with the additional summing of errors at each time step.
-	https://www.ibm.com/topics/recurrent-neural-networks
-	https://www.geeksforgeeks.org/introduction-to-recurrent-neural-network/
-	https://karpathy.github.io/2015/05/21/rnn-effectiveness/
-	- LSTM (long short-term memory) networks are popular as they incorporate "cells" in their hidden layers that help prevent them from forgetting contextual information from far earlier in an input sequence.
-		https://www.geeksforgeeks.org/long-short-term-memory-networks-explanation/
-		https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21
-		https://colah.github.io/posts/2015-08-Understanding-LSTMs/
-	- GRU (gated recurrent unit) networks are similar to LSTMs, using "hidden states" instead of cells to address the same problem.
-		https://medium.com/@prudhviraju.srivatsavaya/lstm-vs-gru-c1209b8ecb5a
-	- BRNN (Bidirectional recurrent neural network) also takes into account future inputs when processing a given input (e.g. later words in a sentence can help draw additional meaning/context). However, they are more complex so more computationally expensive to train and more prone to overfitting.
-		https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/
+**GAN - Generative Adversarial Network** (typically unsupervised; consists of a "generator" and a "discriminator" with the aim of genenerating new images, mainly for specific use cases such as face generation) \
+  https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/ \
+  https://www.geeksforgeeks.org/generative-adversarial-network-gan/ \
+  https://medium.com/@marcodelpra/generative-adversarial-networks-dba10e1b4424 \
+- GAN vs AE: When it comes to generative AI, GANs are typically more difficult to train than autoencoders, but produce sharper images. \
+  https://medium.com/@parakatta/vae-v-s-gan-a-case-study-b09c7169ac02
+- Variants:
+  - **cGAN - conditional GAN** (trained with labels so it can later generate images with specific details) \
+    https://machinelearningmastery.com/how-to-develop-a-conditional-generative-adversarial-network-from-scratch/
 
-Transformer (typically self-supervised; applied to text (or images - see ViT below))
-	Used for e.g. Natural language processing (NLP), such as in ChatGPT and DALL-E 1 (a combination of a transformer and VAE).
-	https://www.geeksforgeeks.org/getting-started-with-transformers/
-	https://blogs.nvidia.com/blog/what-is-a-transformer-model/
-	https://blog.codewithdan.com/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/
-	Consists of an encoder & decoder to respectively encode text prompts into token embeddings and decode them to generate new sequences. Unlike other methods, transformers use Attention, i.e. "soft" weights that can change during testing, as well as "contextual embeddings" so that the encoding of each input element depends on both the element itself and its context in the input as a whole. This allows them to, for example, learn meaning through the relationships between words in a sentence, making them perfect for text encoding and processing input sequences.
-	- RNN vs LSTM vs Transformer: Transformers process inputs in parallel, making them faster than RNNs and LSTMs, and their Attention mechanism provides interpretability, though they may have higher computational & memory requirements.
-		https://medium.com/@mroko001/rnn-vs-lstm-vs-transformers-unraveling-the-secrets-of-sequential-data-processing-c4541c4b09f
-	- BERT model (Bidirectional Encoder Representations from Transformers) - processes text sequences both forward and backward to improve performance.
-		https://samanemami.medium.com/bert-bidirectional-encoder-representations-e98833f9dfcd
-		https://towardsdatascience.com/bert-3d1bf880386a
-	- GPT model (Generative Pretrained Transformer; large language model pretrained on a vast amount of data)
-		https://towardsdatascience.com/gpt-model-how-does-it-work-74bbcc2e97d1
-		https://www.linkedin.com/pulse/understanding-transformer-architecture-chatgpt-built-rastogi-lion-
-	- ViT (Vision Transformers, i.e. transformers applied to images)
-		https://theaisummer.com/vision-transformer/
-		https://medium.com/@hansahettiarachchi/unveiling-vision-transformers-revolutionizing-computer-vision-beyond-convolution-c410110ef061
-		https://medium.com/machine-intelligence-and-deep-learning-lab/vit-vision-transformer-cc56c8071a20
-		- Multi-Axis Vision Transformer (MaxViT) - family of hybrid (CNN + ViT) image classification models
-			https://arxiv.org/abs/2204.01697
-			https://github.com/google-research/maxvit (official Google repository)
-			https://github.com/ChristophReich1996/MaxViT (unofficial PyTorch implementation)
+**RNN - Recurrent Neural Network** (typically supervised; processes sequential or time series data, such as for Natural Language Processing) \
+  Applied to e.g. NLP, speech recognition, language translation. Has a form of "memory" so that, for a given input, prior inputs can be incorporated to influence the output (e.g. earlier words in a sentence combine to draw meaning/context for the current word being processed). RNN training uses a backpropagation through time (BPTT) algorithm, which is akin to backpropagation but with the additional summing of errors at each time step. \
+https://www.ibm.com/topics/recurrent-neural-networks \
+https://www.geeksforgeeks.org/introduction-to-recurrent-neural-network/ \
+https://karpathy.github.io/2015/05/21/rnn-effectiveness/
+- Variants:
+  - **LSTM - Long Short-Term Memory network** (popular as they incorporate "cells" in their hidden layers that help prevent them from forgetting contextual information from far earlier in an input sequence) \
+    https://www.geeksforgeeks.org/long-short-term-memory-networks-explanation/ \
+    https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21 \
+    https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+  - **GRU - Gated Recurrent Unit** (networks that are similar to LSTMs, using "hidden states" instead of cells to address the same problem)
+    https://medium.com/@prudhviraju.srivatsavaya/lstm-vs-gru-c1209b8ecb5a
+  - **BRNN - Bidirectional Recurrent Neural Network** (also takes into account future inputs when processing a given input (e.g. later words in a sentence can help draw additional meaning/context), but are more complex so more computationally expensive to train and more prone to overfitting) \
+    https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/
 
-Diffusion model (aka score-based generative model, e.g. DALL-E 2, Stable Diffusion, Imagen, MidJourney)
-	These models iteratively add carefully controlled noise to the input over N steps. The model is trained to predict this added noise at each step. Small steps ensure that the final image can be approximated by the same underlying noise distribution that is being sampled from. Sampling from this distribution and beginning with a noisy image, this process is then reversed, gradually denoising the image over N steps to generate new data that resembles the input. The architecture for this is based on a U-net thanks to it having the same input and output shapes to judge how much noise has been added. An autoencoder can also be used to upscale the final image, allowing the diffusion model to work with computationally inexpensive low-resolution images.
-	After training in this way on a large data set, we can supply the denoiser with different noise distributions to generate different images. By default this is unconditional based image generation, creating random images based on the training set. If text labels are supplied during training, these can be encoded using a language model and used to guide the diffusion model in generating specific images - this is conditional based image generation. For example, DALL-E 2 uses a technique called Guided Language to Image Diffusion for Generation and Editing (GLIDE), while Stable Diffusion uses a transformer. Other inputs can also be used instead of labels - for example, models that are supplied with segmentation maps to remove objects from images.
-	https://shyampatel1320.medium.com/introduction-to-diffusion-models-and-imagen-the-magic-behind-text-to-image-generation-24221532580d
-	https://tryolabs.com/blog/2022/08/31/from-dalle-to-stable-diffusion#:~:text=How%20does%20diffusion%20work%3F
-	https://www.paepper.com/blog/posts/how-and-why-stable-diffusion-works-for-text-to-image-generation/
+**Transformer** (typically self-supervised; applied to text (or images - see ViT below); used for e.g. Natural language processing (NLP), such as in ChatGPT and DALL-E 1 (a combination of a transformer and VAE)) \
+  Consists of an encoder & decoder to respectively encode text prompts into token embeddings and decode them to generate new sequences. Unlike other methods, transformers use Attention, i.e. "soft" weights that can change during testing, as well as "contextual embeddings" so that the encoding of each input element depends on both the element itself and its context in the input as a whole. This allows them to, for example, learn meaning through the relationships between words in a sentence, making them perfect for text encoding and processing input sequences. \
+https://www.geeksforgeeks.org/getting-started-with-transformers/ \
+https://blogs.nvidia.com/blog/what-is-a-transformer-model/ \
+https://blog.codewithdan.com/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/
+- RNN vs LSTM vs Transformer: Transformers process inputs in parallel, making them faster than RNNs and LSTMs, and their Attention mechanism provides interpretability, though they may have higher computational & memory requirements.
+	https://medium.com/@mroko001/rnn-vs-lstm-vs-transformers-unraveling-the-secrets-of-sequential-data-processing-c4541c4b09f
+- Variants:
+  - **BERT model - Bidirectional Encoder Representations from Transformers** (processes text sequences both forward and backward to improve performance) \
+    https://samanemami.medium.com/bert-bidirectional-encoder-representations-e98833f9dfcd \
+    https://towardsdatascience.com/bert-3d1bf880386a
+  - **GPT model - Generative Pretrained Transformer** (large language model pretrained on a vast amount of data) \
+      https://towardsdatascience.com/gpt-model-how-does-it-work-74bbcc2e97d1 \
+      https://www.linkedin.com/pulse/understanding-transformer-architecture-chatgpt-built-rastogi-lion-
+  - **ViT - Vision Transformers** (i.e. transformers applied to images) \
+      https://theaisummer.com/vision-transformer/ \
+      https://medium.com/machine-intelligence-and-deep-learning-lab/vit-vision-transformer-cc56c8071a20 \
+      https://medium.com/@hansahettiarachchi/unveiling-vision-transformers-revolutionizing-computer-vision-beyond-convolution-c410110ef061
+    - **MaxViT - Multi-Axis Vision Transformer** (family of hybrid (CNN + ViT) image classification models)
+        https://arxiv.org/abs/2204.01697 \
+        https://github.com/google-research/maxvit (official Google repository) \
+        https://github.com/ChristophReich1996/MaxViT (unofficial PyTorch implementation)
 
-A Few Articles on the Ethics of Generative AI
-	https://towardsdatascience.com/generative-ai-ethics-b2db92ecb909
-	https://blogs.ed.ac.uk/ede/2023/07/13/generative-ai-ethics-all-the-way-down/
-	https://www.forbes.com/sites/forbestechcouncil/2023/10/17/which-ethical-implications-of-generative-ai-should-companies-focus-on/
-	https://link.springer.com/article/10.1007/s10676-024-09745-x (Klenk 2024. Ethics of generative AI and manipulation: a design-oriented research agenda)
+**Diffusion model** (aka score-based generative model, e.g. DALL-E 2, Stable Diffusion, Imagen, MidJourney) \
+  These models iteratively add carefully controlled noise to the input over N steps. The model is trained to predict this added noise at each step. Small steps ensure that the final image can be approximated by the same underlying noise distribution that is being sampled from. Sampling from this distribution and beginning with a noisy image, this process is then reversed, gradually denoising the image over N steps to generate new data that resembles the input. The architecture for this is based on a U-Net thanks to it having the same input and output shapes to judge how much noise has been added. An autoencoder can also be used to upscale the final image, allowing the diffusion model to work with computationally inexpensive low-resolution images. \
+  After training in this way on a large data set, we can supply the denoiser with different noise distributions to generate different images. By default this is unconditional based image generation, creating random images based on the training set. If text labels are supplied during training, these can be encoded using a language model and used to guide the diffusion model in generating specific images - this is conditional based image generation. For example, DALL-E 2 uses a technique called Guided Language to Image Diffusion for Generation and Editing (GLIDE), while Stable Diffusion uses a transformer. Other inputs can also be used instead of labels - for example, models that are supplied with segmentation maps to remove objects from images. \
+https://shyampatel1320.medium.com/introduction-to-diffusion-models-and-imagen-the-magic-behind-text-to-image-generation-24221532580d \
+https://tryolabs.com/blog/2022/08/31/from-dalle-to-stable-diffusion#:~:text=How%20does%20diffusion%20work%3F \
+https://www.paepper.com/blog/posts/how-and-why-stable-diffusion-works-for-text-to-image-generation/
 
 ### Miscellaneous
 
