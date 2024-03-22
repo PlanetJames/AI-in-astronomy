@@ -2,27 +2,39 @@
 
 This repository provides links and information about Artificial Intelligence (AI), covering general concepts, how artifical neural networks (ANN) work, types of deep learning (DL), tools and packages, and examples of how AI has been used in the field of astronomy. It is non-exhaustive but can hopefully act as an initial guide.
 
-For many explanations & examples of the things below, you can often just Google them and look for tutorials/articles by GeeksforGeeks (https://www.geeksforgeeks.org/deep-learning-tutorial/), TowardsDataScience (https://towardsdatascience.com/), or MachineLearningMastery (https://machinelearningmastery.com/), among others - see the [General introductions](#general-introductions) section. The links below are all example guides that I've found useful but are not exhaustive - feel free to search for others!
+For many explanations & examples of the things below, you can often just Google them and look for tutorials/articles by GeeksforGeeks (https://www.geeksforgeeks.org/deep-learning-tutorial/), TowardsDataScience (https://towardsdatascience.com/), or MachineLearningMastery (https://machinelearningmastery.com/), among others - see the [Guides](#guides) section. The links below are all example guides that I've found useful but are not exhaustive - feel free to search for others!
 
 
 ## Contents
 
 1. [AI in General](#ai-in-general)
-2. [Neural Networks - Explanations and Guides for Implementation](#neural-networks---explanations-and-guides-for-implementation)
-	1. [General introductions](#general-introductions)
-	2. [How a network learns](#how-a-network-learns)
-	3. [Other aspects of deep learning](#other-aspects-of-deep-learning)
+    1. [General abbreviations](#general-abbreviations)
+    2. [Example categories of AI usage](#example-categories-of-ai-usage)
+    3. [Example paradigms of machine learning](#example-paradigms-of-machine-learning)
+    4. [Overview of machine learning methods (not deep learning)](#overview-of-machine-learning-methods)
+2. [Introduction to Deep Learning](#introduction-to-deep-learning)
+    1. [Guides](#guides)
+    2. [How a network learns](#how-a-network-learns)
+    3. [Core concepts](#core-concepts)
+    4. [Other aspects of deep learning](#other-aspects-of-deep-learning)
+    5. [Extras](#extras)
 3. [Tools and Packages](#tools-and-packages)
+    1. [Python tutorials](#python-tutorials)
+    2. [Python packages (each have guides on their own websites as well)](#python-packages)
+    3. [Designing and visualising neural network architectures](#designing-and-visualising-neural-network-architectures)
+    4. [Citizen science](#citizen-science)
 4. [Types of Deep Learning](#types-of-deep-learning)
-	1. [CNN-based data processing and analysis](#cnn-based-data-processing-and-analysis)
-	2. [Generative AI](#generative-ai)
-	3. [Miscellaneous](#miscellaneous)
+    1. [CNN-based data processing and analysis](#cnn-based-data-processing-and-analysis)
+    2. [Generative AI](#generative-ai)
+    3. [Miscellaneous](#miscellaneous)
 5. [AI use in Astronomy](#ai-use-in-astronomy)
-	1. [Summaries of ML in astronomy](#summaries-of-ml-in-astronomy)
-	2. [Example usage](#example-usage)
+    1. [Summaries of ML in astronomy](#summaries-of-ml-in-astronomy)
+    2. [Example usage](#example-usage)
 
 
 ## AI in General
+
+Here, we'll start with a broad overview of what artificial intelligence, machine learning, and deep learning mean, as well as their broad usage categories (e.g. classification) and paradigms (e.g. supervised learning). If you instead want to go straight to guides and explanations of deep learning, see the [Introduction to Deep Learning](#introduction-to-deep-learning) section, or [Types of Deep Learning](#types-of-deep-learning) and [AI use in Astronomy](#ai-use-in-astronomy) for the various types of deep learning models and how they're used in astronomy. Tutorials and packages for deep learning are provided in the [Tools and Packages](#tools-and-packages) section.
 
 ### General abbreviations
 https://en.wikipedia.org/wiki/Glossary_of_artificial_intelligence
@@ -64,12 +76,14 @@ Supervised vs unsupervised learning - https://www.geeksforgeeks.org/supervised-u
   - https://www.geeksforgeeks.org/what-is-reinforcement-learning/
   - https://towardsdatascience.com/reinforcement-learning-101-e24b50e1d292
 
-### Overview of machine learning methods (not deep learning)
+### Overview of machine learning methods (not deep learning) <a name="overview-of-machine-learning-methods"></a>
 - Machine Learning Tutorial: A Step-by-Step Guide for Beginners - https://www.simplilearn.com/tutorials/machine-learning-tutorial
 - Understand Machine Learning Algorithms - https://machinelearningmastery.com/start-here/#:~:text=Your%20Python%20Projects-,Understand,-Machine%20Learning%20Algorithms
 
 
 ## Introduction to Deep Learning
+
+Below are some general guides to help get you started with deep learning, including their history, architecture, learning process, various types, and methods to improve them. After that, the rest of this section goes into detail about the parts that make up a neural network and how such networks learn. If you want to get straight to trying out training a network yourself, take a look at the [Tools and Packages](#tools-and-packages) section below. If you want to learn more about the various types of deep learning models (like CNNs, language models, and generative AI), see the [Types of Deep Learning](#types-of-deep-learning) section. Or if you want to see how these models are used in astronomy, skip to the [AI use in Astronomy](#ai-use-in-astronomy) section at the end.
 
 ### Guides
 
@@ -83,8 +97,6 @@ Supervised vs unsupervised learning - https://www.geeksforgeeks.org/supervised-u
 
 #### "Deep dive" into DL: overview, architectures, tutorials, improvements
 - Deep Learning (scroll down for more categories) - https://machinelearningmastery.com/start-here/#:~:text=Customised%20Ensemble%20Algorithms-,Deep%20Learning
-
-The next section goes into detail about the parts that make up a neural network and how such networks learn. If you want to get straight to trying out training a network yourself, take a look at the [Tools and Packages](#tools-and-packages) section below. If you want to learn more about the various types of deep learning models (like CNNs, language models, and generative AI), see the [Types of Deep Learning](#types-of-deep-learning) section below.
 
 ### How a network learns
 
@@ -177,12 +189,15 @@ You may want to come back to these once you've had a go training a network for y
 
 ## Tools and Packages
 
+Here you will find various tutorials, tools and packages for deep learning to help get you started with training your own model. You may want to consult the following [Types of Deep Learning](#types-of-deep-learning) and [AI use in Astronomy](#ai-use-in-astronomy) sections to learn about the various types and their applications to help you choose an appropriate model. Basic CNNs are often the go-to for a first model to try out, especially with the prevelance of image data sets like MNIST (which can be loaded via deep learning python packages or downloaded manually).
+
 ### Python tutorials
 - Your First Machine Learning Project in Python Step-By-Step - https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
 - Simple AI articles (2017 intro to ML) - https://medium.com/simple-ai
 - (Also see "deep dive" guide above.)
 
-### Python packages (each have guides on their own websites as well)
+### Python packages
+(Each have guides on their own websites as well.)
 - Machine learning and data pre-processing:
   - **Scikit-learn** - https://scikit-learn.org/stable/
 - Deep learning: \
@@ -190,10 +205,10 @@ You may want to come back to these once you've had a go training a network for y
   - **Tensorflow** - https://www.tensorflow.org/
     - Introduction to Tensorflow: https://machinelearningmastery.com/introduction-python-deep-learning-library-tensorflow/
   - **Keras** (uses Tensorflow) - https://keras.io/
-    - Introduction to Keras: https://machinelearningmastery.com/introduction-python-deep-learning-library-keras/
+    - Introduction to Keras: https://machinelearningmastery.com/start-here/#:~:text=Customised%20Ensemble%20Algorithms-,Deep%20Learning%20(Keras)
     - Tensorflow & Keras: https://machinelearningmastery.com/tensorflow-tutorial-deep-learning-with-tf-keras/
   - **PyTorch** - https://pytorch.org/
-    - Introduction to PyTorch: https://machinelearningmastery.com/pytorch-tutorial-develop-deep-learning-models/
+    - Introduction to PyTorch: https://machinelearningmastery.com/start-here/#:~:text=Python%20with%20Keras-,Deep%20Learning%20(PyTorch)
 - Efficient library (for speed and automatic support for GPUs):
   - **JAX** - https://theaisummer.com/jax/
 - Active learning:
@@ -208,11 +223,14 @@ You may want to come back to these once you've had a go training a network for y
 
 ### Citizen science
 - Zooniverse (crowdsourced data mining) - https://www.zooniverse.org/
+- Zooniverse ML integration (including active learning) - https://git.astron.nl/astron-sdc/escape-wp5/workflows/zooniverse-integrating-machine-learning
 
 
 ## Types of Deep Learning
 
 ### CNN-based data processing and analysis
+
+The basic CNN architecture has proved enduring for it's ability to extract features from images for a variety of tasks (generally image classification). As such, the CNN model has been a backbone for creating both larger models with greater complexity and performance (e.g. ResNet, EfficientNet), as well as being adapted in other ways to handle other image-based tasks (e.g. U-Net image segmentation).
 
 **CNN - Convolutional Neural Network** (typically supervised; used when working with images; building block for many other models) \
   CNNs are most often used for classification problems, though they can also be used for regression tasks. \
@@ -360,7 +378,7 @@ https://www.paepper.com/blog/posts/how-and-why-stable-diffusion-works-for-text-t
 CNNs and their variants (e.g. ResNets, Mask R-CNN) are primarily used for detection and classification within astronomical images.
 Recurrent networks are generally used for detection and classification within transient data (e.g. supernovae).
 GANs often used for generating synthetic data, typically catalogues of images for training & testing other methods.
-VAEs & U-nets used for image modification (denoising, deblurring, etc.) or segmentation (e.g. deblending).
+VAEs & U-Nets used for image modification (denoising, deblurring, etc.) or segmentation (e.g. deblending).
 
 ### Summaries of ML in astronomy
 
