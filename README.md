@@ -1,6 +1,6 @@
 # AI in Astronomy
 
-This repository provides links and information about Artificial Intelligence (AI), covering general concepts, how artifical neural networks (ANN) work, types of deep learning (DL), tools and packages, and examples of how AI has been used in the field of astronomy. It is non-exhaustive but can hopefully act as an initial guide.
+The field of AI and deep learning is ever expanding and evolving, so can be daunting at first to figure out where to start and difficult to understand what might be of use to you. This repository provides links and information about Artificial Intelligence (AI), covering general concepts, how artifical neural networks (ANN) work, types of deep learning (DL), tools and packages, and examples of how AI has been used in the field of astronomy. It is non-exhaustive but can hopefully act as an initial guide.
 
 This page is my own work, not created by generative AI: while nowadays generative AI can be asked to supply information on given topics and even provide references, it is still very generic in its responses and is often unreliable, sometimes even hallucinating information. In contrast, the information and links provided below come from my firsthand experience in getting to grips with AI as an astronomer, so are more specifically tailored to (and hopefully a better guide for) astronomy students going through a similar process.
 
