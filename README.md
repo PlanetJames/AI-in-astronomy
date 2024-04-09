@@ -367,6 +367,11 @@ https://www.paepper.com/blog/posts/how-and-why-stable-diffusion-works-for-text-t
 **PINN - Physics Informed Neural Network** (supervised; use a physically-derived loss function so that output parameters correspond to physical variables)
 	https://towardsdatascience.com/physics-informed-neural-networks-pinns-an-intuitive-guide-fff138069563
 
+**GNN - Graph Neural Network** (supervised, semi-supervised, or unsupervised; created to handle graphs, i.e. relationships between vertices/nodes and the lines/edges that connect them)
+	https://www.v7labs.com/blog/graph-neural-networks-guide
+ 	https://blogs.nvidia.com/blog/what-are-graph-neural-networks/
+  	https://www.geeksforgeeks.org/what-are-graph-neural-networks/
+ 
 **RIM - Restricted Boltzmann Machine** (unsupervised; 2-layer fully connected network)
 	https://www.geeksforgeeks.org/restricted-boltzmann-machine/
 
