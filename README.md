@@ -327,7 +327,7 @@ https://karpathy.github.io/2015/05/21/rnn-effectiveness/
     https://www.geeksforgeeks.org/long-short-term-memory-networks-explanation/ \
     https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21 \
     https://colah.github.io/posts/2015-08-Understanding-LSTMs/
-  - **GRU - Gated Recurrent Unit** (networks that are similar to LSTMs, using "hidden states" instead of cells to address the same problem)
+  - **GRU - Gated Recurrent Unit** (networks that are similar to LSTMs, using "hidden states" instead of cells to address the same problem) \
     https://medium.com/@prudhviraju.srivatsavaya/lstm-vs-gru-c1209b8ecb5a
   - **BRNN - Bidirectional Recurrent Neural Network** (also takes into account future inputs when processing a given input (e.g. later words in a sentence can help draw additional meaning/context), but are more complex so more computationally expensive to train and more prone to overfitting) \
     https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/
@@ -337,8 +337,8 @@ https://karpathy.github.io/2015/05/21/rnn-effectiveness/
 https://www.geeksforgeeks.org/getting-started-with-transformers/ \
 https://blogs.nvidia.com/blog/what-is-a-transformer-model/ \
 https://blog.codewithdan.com/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/
-- RNN vs LSTM vs Transformer: Transformers process inputs in parallel, making them faster than RNNs and LSTMs, and their Attention mechanism provides interpretability, though they may have higher computational & memory requirements.
-	https://medium.com/@mroko001/rnn-vs-lstm-vs-transformers-unraveling-the-secrets-of-sequential-data-processing-c4541c4b09f
+- RNN vs LSTM vs Transformer: Transformers process inputs in parallel, making them faster than RNNs and LSTMs, and their Attention mechanism provides interpretability, though they may have higher computational & memory requirements. \
+  https://medium.com/@mroko001/rnn-vs-lstm-vs-transformers-unraveling-the-secrets-of-sequential-data-processing-c4541c4b09f
 - Variants:
   - **BERT model - Bidirectional Encoder Representations from Transformers** (processes text sequences both forward and backward to improve performance) \
     https://samanemami.medium.com/bert-bidirectional-encoder-representations-e98833f9dfcd \
@@ -364,19 +364,19 @@ https://www.paepper.com/blog/posts/how-and-why-stable-diffusion-works-for-text-t
 
 ### Miscellaneous
 
-**PINN - Physics Informed Neural Network** (supervised; use a physically-derived loss function so that output parameters correspond to physical variables)
+**PINN - Physics Informed Neural Network** (supervised; use a physically-derived loss function so that output parameters correspond to physical variables) \
 	https://towardsdatascience.com/physics-informed-neural-networks-pinns-an-intuitive-guide-fff138069563
 
-**GNN - Graph Neural Network** (supervised, semi-supervised, or unsupervised; created to handle graphs, i.e. relationships between vertices/nodes and the lines/edges that connect them)
-	https://www.v7labs.com/blog/graph-neural-networks-guide
- 	https://blogs.nvidia.com/blog/what-are-graph-neural-networks/
+**GNN - Graph Neural Network** (supervised, semi-supervised, or unsupervised; created to handle graphs, i.e. relationships between vertices/nodes and the lines/edges that connect them) \
+	https://www.v7labs.com/blog/graph-neural-networks-guide \
+ 	https://blogs.nvidia.com/blog/what-are-graph-neural-networks/ \
   	https://www.geeksforgeeks.org/what-are-graph-neural-networks/
  
-**RIM - Restricted Boltzmann Machine** (unsupervised; 2-layer fully connected network)
+**RIM - Restricted Boltzmann Machine** (unsupervised; 2-layer fully connected network) \
 	https://www.geeksforgeeks.org/restricted-boltzmann-machine/
 
-**SOM - Self-Organizing Map** (unsupervised; used for for clustering and dimensionality reduction; produces a low-dimensional (typically 2D) representation of a higher dimensional data set while preserving the topological structure of the data)
-	https://towardsdatascience.com/self-organizing-maps-1b7d2a84e065
+**SOM - Self-Organizing Map** (unsupervised; used for for clustering and dimensionality reduction; produces a low-dimensional (typically 2D) representation of a higher dimensional data set while preserving the topological structure of the data) \
+	https://towardsdatascience.com/self-organizing-maps-1b7d2a84e065 \
 	https://www.geeksforgeeks.org/self-organising-maps-kohonen-maps/
 
 
