@@ -336,6 +336,9 @@ https://karpathy.github.io/2015/05/21/rnn-effectiveness/
   Consists of an encoder & decoder to respectively encode text prompts into token embeddings and decode them to generate new sequences. Unlike other methods, transformers use Attention, i.e. "soft" weights that can change during testing, as well as "contextual embeddings" so that the encoding of each input element depends on both the element itself and its context in the input as a whole. This allows them to, for example, learn meaning through the relationships between words in a sentence, making them perfect for text encoding and processing input sequences. \
 https://www.geeksforgeeks.org/getting-started-with-transformers/ \
 https://blogs.nvidia.com/blog/what-is-a-transformer-model/ \
+https://medium.com/@faheemrustamy/vision-transformers-vs-convolutional-neural-networks-5fe8f9e18efc \
+https://machinelearningmastery.com/the-transformer-attention-mechanism/ \
+https://towardsdatascience.com/intuitive-understanding-of-attention-mechanism-in-deep-learning-6c9482aecf4f \
 https://blog.codewithdan.com/the-abcs-of-ai-transformers-tokens-and-embeddings-a-lego-story/
 - RNN vs LSTM vs Transformer: Transformers process inputs in parallel, making them faster than RNNs and LSTMs, and their Attention mechanism provides interpretability, though they may have higher computational & memory requirements. \
   https://medium.com/@mroko001/rnn-vs-lstm-vs-transformers-unraveling-the-secrets-of-sequential-data-processing-c4541c4b09f
@@ -392,6 +395,7 @@ VAEs & U-Nets used for image modification (denoising, deblurring, etc.) or segme
 - _The Role of Machine Learning in the Next Decade of Cosmology_ (see p4) https://arxiv.org/abs/1902.10159
 - _Foreword to the Focus Issue on Machine Learning in Astronomy and Astrophysics_ https://arxiv.org/abs/1906.08349
 	(See Tables 1 & 2, plus Section 3 for examples of Emerging, Progressing, and Established uses of ML in various sub-fields)
+- _Astronomia ex machina: a history, primer, and outlook on neural networks in astronomy_ https://arxiv.org/abs/2211.03796
 
 ### Example usage
 
