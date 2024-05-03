@@ -423,6 +423,7 @@ Below are some example areas in astronomy where AI has been applied. There are f
 - [Custom] Image Restoration (denoising & deblurring) - network like an autoencoder but with residual layers instead of a latent space (https://arxiv.org/abs/2311.00186)
 - [Physics-aware autoencoder] Self-supervised galaxy model fitting (https://arxiv.org/abs/1907.03957)
 - [Transformer] Improving ADS searches with natural language processing (https://arxiv.org/abs/2112.00590)
+- [Transformer] Galaxy detection and deblending (e.g. https://academic.oup.com/mnras/article/526/1/1122/7273850)
 - [CNN and variants] Detection and modelling of strong gravitational lenses, for example:
   - A Bayesian approach to strong lens finding using an ensemble classifier (citizen science, ResNet, CNN) (https://ui.adsabs.harvard.edu/abs/2023arXiv231107455H/abstract)
   - Finding and rank-ordering strong gravitational lenses with DenseNets (densely connected CNN) (https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.4188N/abstract) - DenseNets achieve comparable true positive rates but considerably lower false positive rates (when compared to residual networks; ResNets), so are recommended.
