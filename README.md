@@ -349,7 +349,7 @@ https://blog.codewithdan.com/the-abcs-of-ai-transformers-tokens-and-embeddings-a
   - **GPT model - Generative Pretrained Transformer** (large language model pretrained on a vast amount of data) \
       https://towardsdatascience.com/gpt-model-how-does-it-work-74bbcc2e97d1 \
       https://www.linkedin.com/pulse/understanding-transformer-architecture-chatgpt-built-rastogi-lion-
-  - **ViT - Vision Transformers** (i.e. transformers applied to images) \
+  - **ViT - Vision Transformer** (i.e. transformers applied to images) \
       https://theaisummer.com/vision-transformer/ \
       https://medium.com/machine-intelligence-and-deep-learning-lab/vit-vision-transformer-cc56c8071a20 \
       https://medium.com/@hansahettiarachchi/unveiling-vision-transformers-revolutionizing-computer-vision-beyond-convolution-c410110ef061
@@ -357,6 +357,10 @@ https://blog.codewithdan.com/the-abcs-of-ai-transformers-tokens-and-embeddings-a
         https://arxiv.org/abs/2204.01697 \
         https://github.com/google-research/maxvit (official Google repository) \
         https://github.com/ChristophReich1996/MaxViT (unofficial PyTorch implementation)
+    - **Swin (Shifted Window) Transformer** (uses a hierarchical architecture with 'shifting windows' to address long-range dependencies within the data and increase efficiency) \
+        https://chautuankien.medium.com/explanation-swin-transformer-93e7a3140877 \
+        _Swin Transformer: Hierarchical Vision Transformer using Shifted Windows_ - https://arxiv.org/abs/2103.14030
+        _Swin Transformer V2: Scaling Up Capacity and Resolution_ - https://arxiv.org/abs/2111.09883
 
 **Diffusion model** (aka score-based generative model, e.g. DALL-E 2, DALL-E 3, Stable Diffusion, Imagen, MidJourney) \
   These models iteratively add carefully controlled noise to the input over N steps. The model is trained to predict this added noise at each step. Small steps ensure that the final image can be approximated by the same underlying noise distribution that is being sampled from. Sampling from this distribution and beginning with a noisy image, this process is then reversed, gradually denoising the image over N steps to generate new data that resembles the input. The architecture for this is based on a U-Net thanks to it having the same input and output shapes to judge how much noise has been added. An autoencoder can also be used to upscale the final image, allowing the diffusion model to work with computationally inexpensive low-resolution images. \
