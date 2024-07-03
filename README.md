@@ -198,9 +198,13 @@ Here you will find various tutorials, tools and packages for deep learning to he
 - Simple AI articles (2017 intro to ML) - https://medium.com/simple-ai
 - (Also see "deep dive" guide above.)
 
+### Resources for models and tutorials
+- **HuggingFace**, a platform where the machine learning community collaborates on models, datasets, and applications - https://huggingface.co/
+- **Papers With Code**, a free and open resource with machine learning papers, code, datasets, methods and evaluation tables - https://paperswithcode.com/
+
 ### Python packages
 (Each have guides on their own websites as well.)
-- Machine learning and data pre-processing:
+- Machine learning and data pre-processing (e.g. PCA, clustering, component separation, Random Forests):
   - **Scikit-learn** - https://scikit-learn.org/stable/
 - Deep learning: \
   (There are various articles comparing these packages, e.g. https://www.simplilearn.com/keras-vs-tensorflow-vs-pytorch-article)
@@ -211,6 +215,8 @@ Here you will find various tutorials, tools and packages for deep learning to he
     - Tensorflow & Keras: https://machinelearningmastery.com/tensorflow-tutorial-deep-learning-with-tf-keras/
   - **PyTorch** - https://pytorch.org/
     - Introduction to PyTorch: https://machinelearningmastery.com/start-here/#:~:text=Python%20with%20Keras-,Deep%20Learning%20(PyTorch)
+- Deep probabilistic programming/modelling:
+    - **PyRo** - https://pyro.ai/
 - Efficient library (for speed and automatic support for GPUs):
   - **JAX** - https://theaisummer.com/jax/
 - Active learning:
