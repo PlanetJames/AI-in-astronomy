@@ -31,7 +31,8 @@ For many explanations & examples of the things below, you can often just Google 
     3. [Miscellaneous](#miscellaneous)
 5. [AI use in Astronomy](#ai-use-in-astronomy)
     1. [Summaries of ML in astronomy](#summaries-of-ml-in-astronomy)
-    2. [Example usage](#example-usage)
+    2. [Simulation-based inference (SBI)](#simulation-based-inference-sbi)
+    3. [Example usage](#example-usage)
 
 
 ## AI in General
@@ -287,10 +288,15 @@ The basic CNN architecture has proved enduring for it's ability to extract featu
 
 **R-CNN - Regional CNN** (typically supervised; used for object detection - in addition to classification, it also applies a bounding box around each identified object, so can identify multiple objects of various classes) \
   https://www.geeksforgeeks.org/r-cnn-region-based-cnns/ \
-  https://medium.com/analytics-vidhya/region-based-convolutional-neural-network-rcnn-b68ada0db871
+  https://medium.com/analytics-vidhya/region-based-convolutional-neural-network-rcnn-b68ada0db871 \
+
+**Mask R-CNN** (typically supervised; image segmentation by producing masks around detected objects, rather than just using rectangular bounding boxes) \
+  Original paper: https://arxiv.org/abs/1703.06870 \
+  Example: https://github.com/matterport/Mask_RCNN
 
 **U-Net** (typically supervised; mainly for image segmentation, though has also been used for denoising, super-resolution, and more) \
   U-Nets contain an encoder and decoder, but unlike autoencoders the decoder also makes use of encoder information via skip connections. These skip connections aid in accurate feature extraction, but prevent the encoder and decoder from being separated. \
+  U-Nets perform semantic segmentation, assigning a single class to each image pixel, while Mask R-CNNs perform instance segmentation, assigning one or more labels to each pixel. Hence, U-Nets are typically better than Mask R-CNNs at segmentation, but only when objects don't overlap (such as a person standing partly behind a car). \
   https://www.geeksforgeeks.org/u-net-architecture-explained/ \
   https://towardsdatascience.com/understanding-u-net-61276b10f360
 
@@ -410,6 +416,14 @@ VAEs & U-Nets used for image modification (denoising, deblurring, etc.) or segme
 - _Foreword to the Focus Issue on Machine Learning in Astronomy and Astrophysics_ https://arxiv.org/abs/1906.08349
 	(See Tables 1 & 2, plus Section 3 for examples of Emerging, Progressing, and Established uses of ML in various sub-fields)
 - _Astronomia ex machina: a history, primer, and outlook on neural networks in astronomy_ https://arxiv.org/abs/2211.03796
+
+### Simulation-based inference (SBI)
+
+Replacing full, complex simulators with a technique more suitable for statistical inference. From Cranmer+2020 (see below): "_The source of the challenge is that the probability density (or likelihood) for a given observation — an essential ingredient for both frequentist and Bayesian inference methods — is typically intractable. [...] The problem setting of statistical inference under intractable likelihoods has been dubbed likelihood-free inference — although it is a bit of a misnomer as typically one attempts to estimate the intractable likelihood, so we feel the term simulation-based inference is more apt._" Two common traditional approaches are density estimation and approximate Bayesian computation (ABC), though SBI has now expanded into probabilistic models with neural networks and active learning.
+- Introduction and papers using SBI: https://simulation-based-inference.org/
+  - See especially Cranmer+2020, _The frontier of simulation-based inference_: https://www.pnas.org/doi/full/10.1073/pnas.1912789117
+- Tutorial "aimed at scientists with a bit of a stats background, but without machine learning experience": https://astroautomata.com/blog/simulation-based-inference/
+- Example PyTorch package for Python: https://github.com/sbi-dev/sbi
 
 ### Example usage
 
